@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Wheel from './TimeWheel.png'
+import Wheel from './TimeWheelLg.png'
 
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -12,9 +12,16 @@ let day = Math.floor(diff / oneDay);
 
 const useStyles = makeStyles(theme => ({
     wheel: {
+      width: '60vw',
+      height: 375,
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      overflow: 'hidden',
       '& img' : {
         transform: `rotate(${(day * 0.986) - 30}deg)`,
-        transition: '300ms linear all'
+        // transition: '300ms linear all',
+        marginTop: '-44vw',
+        width: '60vw'
       }
     }
 }));
