@@ -8,12 +8,12 @@ let start = new Date(now.getFullYear(), 0, 0);
 let diff = now - start;
 let oneDay = 1000 * 60 * 60 * 24;
 let day = Math.floor(diff / oneDay);
-
+// day = 0;
 
 const useStyles = makeStyles(theme => ({
     wheel: {
       width: '60vw',
-      height: 375,
+      height: 200,
       marginLeft: 'auto',
       marginRight: 'auto',
       overflow: 'hidden',
