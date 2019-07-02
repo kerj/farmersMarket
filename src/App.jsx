@@ -3,7 +3,7 @@ import Seasonbox from './components/seasonbox/Seasonbox';
 import Navbar from './components/navbar/Navbar';
 import Timewheel from './components/Timewheel/Timewheel';
 
-const availableProduce = [  
+export const availableProduce = [  
   {  
      month: "January",
      selection: [  
@@ -311,12 +311,16 @@ const marketSchedule = [
   }
  ];
 
+ 
 function App() {
   return (
     <div>
     <Navbar/>
     <Timewheel/>
-    <Seasonbox/>
+    <Seasonbox
+      month={availableProduce.month}
+      selection={availableProduce.selection}
+    />
     </div>
   );
 }
